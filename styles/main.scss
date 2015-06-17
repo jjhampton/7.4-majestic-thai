@@ -19,3 +19,43 @@ body {
   background-color: $base-background-color;
   color: $base-font-color;
 }
+
+.menu-container {
+  display: inline-block;
+  vertical-align: top;
+  width: 65%;
+}
+
+.order-container {
+  display: inline-block;
+  vertical-align: top;
+  float: right;
+  width: 30%;
+  border: 1px solid red;
+}
+
+.category {
+  margin-top: 20px;
+  margin-left: 20px;
+  border: 1px solid blue;
+}
+
+.category-title {
+  padding: 10px;
+}
+
+.category-item {
+  border: 1px solid black;
+  padding: 10px;
+}
+
+.category-item-text {
+  display: inline-block;
+  width: 70%;
+}
+
+.category-item-button-price {
+  float: right;
+  vertical-align: top;
+  margin-top: 20px;
+}
