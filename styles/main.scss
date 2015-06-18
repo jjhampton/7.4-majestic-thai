@@ -20,7 +20,7 @@ body {
   color: $base-font-color;
 }
 
-.menu-container {
+.menu {
   display: inline-block;
   vertical-align: top;
   width: 65%;
@@ -36,12 +36,15 @@ body {
   border: 1px solid red;
 }
 
-.category {
+.category,
+.item {
   margin-left: 20px;
   border: 1px solid red;
 }
 
-.category-title {
+.category-title,
+.item-title,
+.item-description {
   padding: 10px;
 }
 
@@ -63,6 +66,15 @@ body {
   float: right;
   vertical-align: top;
   margin-top: 20px;
+}
+
+.item-button-cancel {
+  margin-left: 20px;
+}
+
+.item-button-add {
+  float: right;
+  margin-right: 20px;
 }
 
 .order-header,
