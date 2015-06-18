@@ -12,6 +12,9 @@ export default Backbone.View.extend({
 
 });
 
+Handlebars.registerHelper('priceFixed', function(price) {
+  return price.toFixed(2);
+});
 
 
 // <section class="category">
