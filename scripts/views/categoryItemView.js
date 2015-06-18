@@ -2,12 +2,21 @@ export default Backbone.View.extend({
   template: JST.categoryItem,
   className: 'category-item',
 
+  events: {
+    'click .category-item-button-price': 'logPrice'
+  },
+
   initialize: function() {
     this.render();
   },
 
   render: function() {
     this.$el.html(this.template(this.model.toJSON()));
+  },
+
+  logPrice: function(event) {
+    console.log('clicked');
+    console.log(this.model.toJSON().price);
   }
 
 });

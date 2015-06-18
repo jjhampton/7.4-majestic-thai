@@ -3,7 +3,6 @@ import {Items} from './models/items';
 import MenuView from './views/menuView';
 
 
-
 var Router = Backbone.Router.extend({
   routes: {
     '': 'index'
