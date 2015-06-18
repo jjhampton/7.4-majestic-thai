@@ -4,7 +4,8 @@ export default Backbone.View.extend({
   tagName: 'section',
   className: 'menu',
 
-  initialize: function() {
+  initialize: function(options) {
+    this.order = options.order;
     this.render();
   },
 
@@ -18,6 +19,7 @@ export default Backbone.View.extend({
     this.children = this.collection.map(function(child) {
       var view = new CategoryItemView({
         model: child,
+        order: this.order
       });
       this.$el.append(view.el);
       return view;

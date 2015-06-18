@@ -1,6 +1,9 @@
 import {Items} from './models/items';
 
+import Order from './models/order';
+
 import MenuView from './views/menuView';
+
 
 
 var Router = Backbone.Router.extend({
@@ -10,12 +13,13 @@ var Router = Backbone.Router.extend({
 
   initialize: function() {
     var items = new Items();
+    var order = new Order();
 
 
     items.fetch().then(function() {
-      console.log(items.toJSON());
       var menuView = new MenuView({
-        collection: items
+        collection: items,
+        order: order
       });
       $('.main-container').prepend(menuView.el);
       $('.main-container').append(JST.order());
