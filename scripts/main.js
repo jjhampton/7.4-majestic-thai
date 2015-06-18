@@ -3,6 +3,6 @@
   $(document).ready(function(){
     $('body').prepend(JST.menu());
     $('body').append(JST.order());
-    $('.menu').html(JST.item()); 
+    // $('.menu').html(JST.item());
   });
 })();
