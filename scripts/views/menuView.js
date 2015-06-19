@@ -12,13 +12,13 @@ export default Backbone.View.extend({
   render: function() {
     _.invoke(this.children || [], 'remove');
 
-    console.log(this.collection);
 
-    _.each(this.collection, function(child, index) {
+    _.each(this.collection, function(child, index, list) {
       var view = new CategoryView({
         model: child,
         order: this.order,
-        collection: this.collection[index]
+        collection: this.collection[index],
+        category: index
       });
       this.$el.append(view.el);
       return view;

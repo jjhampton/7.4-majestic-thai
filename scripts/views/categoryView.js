@@ -8,11 +8,12 @@ export default Backbone.View.extend({
 
   initialize: function(options) {
     this.order = options.order;
+    this.category = options.category;
     this.render();
   },
 
   render: function() {
-    this.$el.html(this.template(this.collection.toJSON))
+    this.$el.html(this.template({category: this.category}));
     this.renderChildren();
   },
 
