@@ -27,16 +27,6 @@ export default Backbone.View.extend({
       return view;
     }.bind(this));
 
-    //Add popular items view to element
-
-    var popularItemsView = new CategoryView({
-      order: this.order,
-      collection: this.popularItems,
-      category: "Popular Items"
-    });
-    this.$el.prepend(popularItemsView.el);
-
-
     return this;
   },
 

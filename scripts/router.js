@@ -22,13 +22,17 @@ var Router = Backbone.Router.extend({
     });
 
     items.fetch().then(function() {
-      var popularItems = items.where({popularity: 1});
+      var popularItemsArray = items.where({popularity: 1});
       var itemsByCategory = items.groupBy('category');
+
+      itemsByCategory["Popular Items"] = popularItemsArray;
+      console.log("itemsByCategory is now ", itemsByCategory);
+
+
 
       var menuView = new MenuView({
         collection: itemsByCategory,
         order: order,
-        popularItems: popularItems
       });
 
       $('.main-container').prepend(menuView.el);

@@ -5,12 +5,11 @@ export default Backbone.View.extend({
 
   initialize: function(){
     this.render();
-    this.listenTo(this.collection, 'add remove', this.itemAddedLog);
+    // this.listenTo(this.collection, 'add remove', this.itemAddedLog);
     this.listenTo(this.collection, 'add remove', this.render);
   },
 
   render: function(model, collection) {
-    console.log('render called');
     this.$el.html(this.template(this.collection.toJSON()));
   },
 
