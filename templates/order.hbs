@@ -7,13 +7,13 @@
     <span class="order-item-heading">Item</span>
     <span class="order-price-heading">Price</span>
   </div>
-  {{#each this}}
+{{#each this}}
   <div class="order-item">
     <span class="order-item-text">{{number}}. {{name}}</span>
     <span class="order-item-price">${{priceFixed price}}</span>
     <span class="order-item-button-remove"><i class="fa fa-times"></i></span>
-  {{/each}}
-</div>
+  </div>
+{{/each}}
 <div class="order-checkout">
   <button class="order-checkout-button button-primary">Proceed to Checkout</button>
 </div>
