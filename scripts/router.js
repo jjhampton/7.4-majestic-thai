@@ -17,6 +17,8 @@ var Router = Backbone.Router.extend({
 
 
     items.fetch().then(function() {
+      items = items.groupBy('category');
+      console.log(items);
       var menuView = new MenuView({
         collection: items,
         order: order

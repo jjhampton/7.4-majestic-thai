@@ -65,7 +65,7 @@ body {
 .category-item-button-price {
   float: right;
   vertical-align: top;
-  margin-top: 20px;
+  margin-top: 5px;
 }
 
 .item-button-cancel {
@@ -89,7 +89,8 @@ body {
 }
 
 .order-list-headings,
-.order-item {
+.order-item,
+.order-checkout {
   padding: 10px;
 }
 

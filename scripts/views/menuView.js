@@ -1,4 +1,4 @@
-import CategoryItemView from './categoryItemView';
+import CategoryView from './categoryView';
 
 export default Backbone.View.extend({
   tagName: 'section',
@@ -10,22 +10,33 @@ export default Backbone.View.extend({
   },
 
   render: function() {
-    this.renderChildren();
-  },
-
-  renderChildren: function() {
     _.invoke(this.children || [], 'remove');
 
-    this.children = this.collection.map(function(child) {
-      var view = new CategoryItemView({
+    console.log(this.collection);
+
+    _.each(this.collection, function(child, index) {
+      var view = new CategoryView({
         model: child,
-        order: this.order
+        order: this.order,
+        collection: this.collection[index]
       });
       this.$el.append(view.el);
       return view;
     }.bind(this));
 
     return this;
+
+    // this.children = this.collection.map(function(child) {
+    //   var view = new CategoryView({
+    //     model: child,
+    //     order: this.order,
+    //     collection: this.collection
+    //   });
+    //   this.$el.append(view.el);
+    //   return view;
+    // }.bind(this));
+    //
+    // return this;
   },
 
   remove: function(){
