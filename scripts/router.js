@@ -1,6 +1,6 @@
 import {Items} from './models/items';
 
-import Order from './models/order';
+import {Order} from './models/order';
 
 import MenuView from './views/menuView';
 

@@ -9,6 +9,7 @@ export default Backbone.View.extend({
   initialize: function(options) {
     this.order = options.order;
     this.render();
+    this.listenTo(this.order, 'update', this.render);
   },
 
   render: function() {
@@ -16,11 +17,17 @@ export default Backbone.View.extend({
   },
 
   addToOrder: function(event) {
-    console.log('clicked');
-    console.log(this.model.toJSON().price);
-    this.order.add(this.model);
-  }
+    var isInOrder = this.order.contains(this.model);
 
+    console.log('clicked ' + this.model.toJSON().price);
+
+    if (isInOrder) {
+      console.log('already has it');
+    }
+    else {
+      this.order.add(this.model);
+    }
+  }
 });
 
 Handlebars.registerHelper('priceFixed', function(price) {
