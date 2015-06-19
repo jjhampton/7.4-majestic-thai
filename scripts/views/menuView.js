@@ -6,16 +6,19 @@ export default Backbone.View.extend({
 
   initialize: function(options) {
     this.order = options.order;
+    this.popularItems = options.popularItems;
     this.render();
   },
 
   render: function() {
+
+
     _.invoke(this.children || [], 'remove');
 
+    //iterate over filtered collection object and create child CategoryViews.  index argument is category title
 
-    _.each(this.collection, function(child, index, list) {
+    this.children =  _.each(this.collection, function(child, index, list) {
       var view = new CategoryView({
-        model: child,
         order: this.order,
         collection: this.collection[index],
         category: index
@@ -24,19 +27,15 @@ export default Backbone.View.extend({
       return view;
     }.bind(this));
 
-    return this;
+    var popularItemsView = new CategoryView({
+      order: this.order,
+      collection: this.popularItems,
+      category: "Popular Items"
+    });
+    this.$el.prepend(popularItemsView.el);
 
-    // this.children = this.collection.map(function(child) {
-    //   var view = new CategoryView({
-    //     model: child,
-    //     order: this.order,
-    //     collection: this.collection
-    //   });
-    //   this.$el.append(view.el);
-    //   return view;
-    // }.bind(this));
-    //
-    // return this;
+
+    return this;
   },
 
   remove: function(){
