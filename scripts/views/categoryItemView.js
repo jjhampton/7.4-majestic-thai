@@ -25,6 +25,7 @@ export default Backbone.View.extend({
       console.log('already has it');
     }
     else {
+      //new instance
       this.order.add(this.model);
     }
   }
