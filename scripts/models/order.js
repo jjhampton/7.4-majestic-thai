@@ -20,8 +20,7 @@ var Order =  Backbone.Collection.extend({
   },
 
   itemAdded: function(model) {
-    console.log(model.get('name') + " was added to the order");
-    console.log(this.length + " items in cart");
+    console.log(model.get('name') + " was added to the order - Order Collection");
   },
 
   //Not sure if needed

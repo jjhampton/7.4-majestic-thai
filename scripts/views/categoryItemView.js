@@ -19,7 +19,7 @@ export default Backbone.View.extend({
   addToOrder: function(event) {
     var isInOrder = this.order.contains(this.model);
 
-    console.log('clicked ' + this.model.toJSON().price);
+    console.log('clicked item with price of ' + this.model.toJSON().price + ' in category item view');
 
     if (isInOrder) {
       console.log('already has it');
