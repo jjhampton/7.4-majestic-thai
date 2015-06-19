@@ -26,10 +26,6 @@ var Router = Backbone.Router.extend({
       var itemsByCategory = items.groupBy('category');
 
       itemsByCategory["Popular Items"] = popularItemsArray;
-      console.log(itemsByCategory);
-      console.log("itemsByCategory is now ", itemsByCategory);
-
-
 
       var menuView = new MenuView({
         collection: itemsByCategory,
