@@ -1,11 +1,11 @@
 var Item = Backbone.Model.extend({
+  idAttribute: 'objectId'
 });
 
 
 var Items = Backbone.Collection.extend({
   model: Item,
   url: 'https://api.parse.com/1/classes/Items',
-  idAttribute: 'objectId',
 
   //Parse API returns models under results property
   parse: function(response) {
@@ -13,4 +13,4 @@ var Items = Backbone.Collection.extend({
   }
 });
 
-export default {Items};
+export default {Item, Items};

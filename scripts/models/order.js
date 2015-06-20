@@ -2,6 +2,13 @@ import {Items} from './items';
 
 var Order =  Backbone.Model.extend({
 
+  idAttribute: 'objectId',
+
+  //are defaults needed???
+  defaults: {
+    name: ""
+  },
+
   // model: OrderedItem,
 
   initialize: function() {
@@ -31,6 +38,15 @@ var Order =  Backbone.Model.extend({
   toJSON: function() {
     // return this.orderedItems.toJSON();
     // apparently unneeded
+    return _.extend({}, this.attributes, {
+      orderedItems: this.orderedItems.map(function(item){
+          return {
+            "__type": "Pointer",
+            "className": "Items",
+            "objectId": item.id
+          };
+      })
+    });
   },
 
   map: function(callback){
@@ -39,21 +55,18 @@ var Order =  Backbone.Model.extend({
 
   setSubtotal: function(model, collection) {
     var subtotal;
-
-    console.log(model.get('name') + " was added to the order");
-    console.log("The order collection is", this.orderedItems);
-
     subtotal = this.orderedItems.reduce(function(prev, cur, index) {
       var currentPrice = cur.get('price');
-      console.log("Current price is", currentPrice);
       return prev + currentPrice;
     }, 0).toFixed(2);
-    console.log("setSubtotal variable method is", subtotal);
     this.set('subtotal', subtotal);
-    console.log("this.subtotal is", this.get('subtotal', subtotal));
-
   }
 
 });
 
-export default {Order};
+var OrderCollection = Backbone.Collection.extend({
+  model: Order,
+  url: "https://api.parse.com/1/classes/Order"
+});
+
+export default {Order, OrderCollection};
