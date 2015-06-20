@@ -23,7 +23,7 @@ export default Backbone.View.extend({
       var view = new OrderItemView({
         model: child,
       });
-      this.$('.order-checkout').before(view.el);
+      this.$('.order-subtotal').before(view.el);
       return view;
     }.bind(this));
 
