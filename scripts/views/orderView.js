@@ -1,3 +1,5 @@
+import OrderItemView from './orderItemView';
+
 export default Backbone.View.extend({
   template: JST.order,
   tagName: 'sidebar',
@@ -11,6 +13,21 @@ export default Backbone.View.extend({
 
   render: function(model, collection) {
     this.$el.html(this.template(this.collection.toJSON()));
+    this.renderChildren();
+  },
+
+  renderChildren: function() {
+    _.invoke(this.children || [], 'remove');
+
+    this.children = this.collection.map(function(child) {
+      var view = new OrderItemView({
+        model: child,
+      });
+      this.$('.order-checkout').before(view.el);
+      return view;
+    }.bind(this));
+
+    return this;
   },
 
   itemAddedLog: function(model, collection) {
