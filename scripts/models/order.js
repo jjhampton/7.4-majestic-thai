@@ -46,7 +46,7 @@ var Order =  Backbone.Model.extend({
       var currentPrice = cur.get('price');
       console.log("Current price is", currentPrice);
       return prev + currentPrice;
-    }, 0);
+    }, 0).toFixed(2);
     console.log("setSubtotal variable method is", subtotal);
     this.set('subtotal', subtotal);
     console.log("this.subtotal is", this.get('subtotal', subtotal));
