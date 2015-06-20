@@ -29,7 +29,8 @@ var Order =  Backbone.Model.extend({
   },
 
   toJSON: function() {
-    return this.orderedItems.toJSON();
+    // return this.orderedItems.toJSON();
+    // apparently unneeded
   },
 
   map: function(callback){
