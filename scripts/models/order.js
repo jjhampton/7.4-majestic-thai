@@ -13,7 +13,7 @@ var Order =  Backbone.Model.extend({
 
     this.listenTo(this.orderedItems, 'all', this.trigger.bind(this));
 
-    this.listenTo(this, 'add remove', this.subtotal);
+    this.listenTo(this, 'add remove', this.setSubtotal);
   },
 
   //Proxy add method to the orderedItems collection
@@ -36,7 +36,7 @@ var Order =  Backbone.Model.extend({
     return this.orderedItems.map(callback);
   },
 
-  subtotal: function(model, collection) {
+  setSubtotal: function(model, collection) {
     var subtotal;
 
     console.log(model.get('name') + " was added to the order");
@@ -47,7 +47,10 @@ var Order =  Backbone.Model.extend({
       console.log("Current price is", currentPrice);
       return prev + currentPrice;
     }, 0);
-    console.log("Subtotal is", subtotal);
+    console.log("setSubtotal variable method is", subtotal);
+    this.set('subtotal', subtotal);
+    console.log("this.subtotal is", this.get('subtotal', subtotal));
+
   }
 
 });

@@ -12,7 +12,9 @@ export default Backbone.View.extend({
   },
 
   render: function(model, collection) {
-    this.$el.html(this.template(this.model.toJSON()));
+    this.$el.html(this.template({
+      subtotal: this.model.get('subtotal')
+    }));
     this.renderChildren();
   },
 
