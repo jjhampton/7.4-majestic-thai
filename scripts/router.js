@@ -18,7 +18,7 @@ var Router = Backbone.Router.extend({
     var items = new Items();
     var order = new Order();
     var orderView = new OrderView({
-      collection: order
+      model: order,
     });
 
     items.fetch().then(function() {

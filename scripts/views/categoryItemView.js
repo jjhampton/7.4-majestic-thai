@@ -17,17 +17,17 @@ export default Backbone.View.extend({
   },
 
   addToOrder: function(event) {
-    var isInOrder = this.order.contains(this.model);
+    // var isInOrder = this.order.contains(this.model);
 
     console.log('clicked item with price of ' + this.model.toJSON().price + ' in category item view');
 
-    if (isInOrder) {
-      console.log('already has it');
-    }
-    else {
+    // if (isInOrder) {
+    //   console.log('already has it');
+    // }
+    // else {
       //new instance for multi-quantities
       this.order.add(this.model);
-    }
+    // }
   }
 });
 

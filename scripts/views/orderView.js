@@ -8,18 +8,18 @@ export default Backbone.View.extend({
   initialize: function(){
     this.render();
     // this.listenTo(this.collection, 'add remove', this.itemAddedLog);
-    this.listenTo(this.collection, 'add remove', this.render);
+    this.listenTo(this.model, 'add remove', this.render);
   },
 
   render: function(model, collection) {
-    this.$el.html(this.template(this.collection.toJSON()));
+    this.$el.html(this.template(this.model.toJSON()));
     this.renderChildren();
   },
 
   renderChildren: function() {
     _.invoke(this.children || [], 'remove');
 
-    this.children = this.collection.map(function(child) {
+    this.children = this.model.map(function(child) {
       var view = new OrderItemView({
         model: child,
       });

@@ -1,31 +1,48 @@
+import {Items} from './items';
 
-//credit: http://www.elfsternberg.com/2010/12/08/backbonejs-introducing-backbone-store/
-
-// var OrderedItem = Backbone.Model.extend({
-//     update: function(amount) {
-//         this.set({'quantity': this.get('quantity') + amount});
-//     }
-// });
-
-var Order =  Backbone.Collection.extend({
+var Order =  Backbone.Model.extend({
 
   // model: OrderedItem,
 
   initialize: function() {
+    //Create a orderedItems collection to keep track of our ordered items
+
+    this.orderedItems = new Items();
+
+    //Trigger all orderedItems events on myself
+
+    this.listenTo(this.orderedItems, 'all', this.trigger.bind(this));
+
     this.listenTo(this, 'add remove', this.subtotal);
   },
 
-  add: function(model) {
-    Backbone.Collection.prototype.add.apply(this, arguments);
+  //Proxy add method to the orderedItems collection
+
+  add: function(models, options) {
+    return this.orderedItems.add(models, options);
+  },
+
+  //Proxy remove method to the orderedItems collection
+
+  remove: function(models, options) {
+    return this.orderedItems.remove(models, options);
+  },
+
+  toJSON: function() {
+    return this.orderedItems.toJSON();
+  },
+
+  map: function(callback){
+    return this.orderedItems.map(callback);
   },
 
   subtotal: function(model, collection) {
     var subtotal;
 
     console.log(model.get('name') + " was added to the order");
-    console.log("The order collection is", this);
+    console.log("The order collection is", this.orderedItems);
 
-    subtotal = this.reduce(function(prev, cur, index) {
+    subtotal = this.orderedItems.reduce(function(prev, cur, index) {
       var currentPrice = cur.get('price');
       console.log("Current price is", currentPrice);
       return prev + currentPrice;
