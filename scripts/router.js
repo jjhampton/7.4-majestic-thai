@@ -19,7 +19,6 @@ var Router = Backbone.Router.extend({
   initialize: function() {
     var items = new Items();
     var order = new Order();
-    //new collection to be saved on backend??
     var orderCollection = new OrderCollection();
     var orderView = new OrderView({
       model: order,
