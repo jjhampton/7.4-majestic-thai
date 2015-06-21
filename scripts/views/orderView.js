@@ -36,6 +36,8 @@ export default Backbone.View.extend({
   },
 
   checkoutOrder: function() {
+    //Add a name property to order - add later
+
     console.log(this.model.toJSON());
     this.collection.create(this.model, {
       dataType: 'text',

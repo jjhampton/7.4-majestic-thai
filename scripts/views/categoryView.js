@@ -6,14 +6,22 @@ export default Backbone.View.extend({
   tagName: 'section',
   className: 'category',
 
+  events: {
+    'click .category-dropdown': 'toggleDropdown'
+  },
+
   initialize: function(options) {
     this.order = options.order;
     this.category = options.category;
     this.render();
+    this.listenTo(this.model, 'change:isHidden', this.render);
   },
 
   render: function() {
-    this.$el.html(this.template({category: this.category}));
+    this.$el.html(this.template({
+      category: this.category,
+      isHidden: this.model.get('isHidden')
+      }));
     this.renderChildren();
   },
 
@@ -25,10 +33,17 @@ export default Backbone.View.extend({
         model: child,
         order: this.order
       });
-      this.$el.append(view.el);
+      this.$('.category-item-container').append(view.el);
       return view;
     }.bind(this));
 
     return this;
   },
+
+  toggleDropdown: function() {
+    console.log('toggle clicked');
+    console.log(this.model.get('isHidden'));
+    this.model.set('isHidden', !this.model.get('isHidden'));
+    console.log(this.model.get('isHidden'));
+  }
 });

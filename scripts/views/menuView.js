@@ -1,10 +1,14 @@
 import CategoryView from './categoryView';
 
+import CategoryVM from '../view-models/categoryVM';
+
 export default Backbone.View.extend({
   tagName: 'section',
   className: 'menu',
 
   initialize: function(options) {
+    this.categoryVM = new CategoryVM();
+
     this.order = options.order;
     this.popularItems = options.popularItems;
     this.render();
@@ -19,6 +23,7 @@ export default Backbone.View.extend({
 
     this.children =  _.each(this.collection, function(child, index) {
       var view = new CategoryView({
+        model: this.categoryVM,
         order: this.order,
         collection: this.collection[index],
         category: index
