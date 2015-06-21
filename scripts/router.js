@@ -24,10 +24,12 @@ var Router = Backbone.Router.extend({
     this.order = new Order();
     this.orderCollection = new OrderCollection();
 
+    this.fetchItemsPromise = this.items.fetch();
+
   },
 
   index: function() {
-    this.items.fetch().then(function(data) {
+    this.fetchItemsPromise.then(function(data) {
       var popularItemsArray = this.items.where({popularity: 1});
       var itemsByCategory = this.items.groupBy('category');
 
@@ -51,15 +53,24 @@ var Router = Backbone.Router.extend({
   },
 
   show: function(id) {
-    var clickedItem = _.findWhere(this.items.toJSON(), {objectId: id});
+    this.fetchItemsPromise.then(function(){
+      var clickedItem = _.findWhere(this.items.toJSON(), {objectId: id});
 
 
-    var itemShowView = new ItemShowView({
-      model: clickedItem,
-      order: this.order
-    });
+      var itemShowView = new ItemShowView({
+        model: clickedItem,
+        order: this.order
+      });
 
-    this.showView(itemShowView);
+      this.showView(itemShowView);
+
+      var orderView = new OrderView({
+        model: this.order,
+        collection: this.orderCollection,
+      });
+
+      $('.order').html(orderView.el);
+    }.bind(this));
   },
 
   showView: function(view) {
