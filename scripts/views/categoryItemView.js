@@ -6,7 +6,7 @@ export default Backbone.View.extend({
   className: 'category-item',
 
   events: {
-    'click .category-item-button-price': 'addToOrder'
+    'click .category-item-button-price': 'showItem'
   },
 
   initialize: function(options) {
@@ -17,6 +17,11 @@ export default Backbone.View.extend({
 
   render: function() {
     this.$el.html(this.template(this.model.toJSON()));
+  },
+
+  showItem: function() {
+    var clickedItem = this.model.toJSON();
+    console.log(clickedItem, "clicked");
   },
 
   addToOrder: function(event) {
