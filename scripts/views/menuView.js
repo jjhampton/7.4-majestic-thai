@@ -8,7 +8,6 @@ export default Backbone.View.extend({
 
   initialize: function(options) {
     this.order = options.order;
-    this.popularItems = options.popularItems;
     this.render();
   },
 

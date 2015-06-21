@@ -9,8 +9,6 @@ var Order =  Backbone.Model.extend({
     name: ""
   },
 
-  // model: OrderedItem,
-
   initialize: function() {
     //Create a orderedItems collection to keep track of our ordered items
 
