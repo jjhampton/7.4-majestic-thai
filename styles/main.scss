@@ -45,8 +45,9 @@ a:hover {
 }
 
 .order {
+  position: fixed;
+  right: 0;
   display: inline-block;
-  float: right;
   vertical-align: top;
   margin-right: 20px;
   width: 30%;
