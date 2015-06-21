@@ -23,6 +23,7 @@ var Router = Backbone.Router.extend({
     var orderCollection = new OrderCollection();
     var orderView = new OrderView({
       model: order,
+      collection: orderCollection
     });
 
     items.fetch().then(function() {
@@ -38,7 +39,6 @@ var Router = Backbone.Router.extend({
 
       $('.main-container').prepend(menuView.el);
       $('.main-container').append(orderView.el);
-      console.log(orderCollection);
     }.bind(this));
   },
 
