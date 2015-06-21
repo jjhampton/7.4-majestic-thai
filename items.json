@@ -5,7 +5,7 @@
       "name": "Spring Rolls",
       "number": 6,
       "price": 4.00,
-      "description": "Encyclopaedia galactica great turbulent clouds, venture Euclid, cosmos birth billions upon billions citizens of distant epochs rich in mystery, the sky calls to us muse about worldlets.",
+      "description": "Delicious Vietnamese spring rolls prepared in the traditional style.  Contains mixture of pork, shrimp, and crab meat and served with hoisin peanut sauce.",
       "category": "Appetizer",
       "popularity": 1
     },
@@ -13,7 +13,7 @@
       "name": "Crab Rangoons",
       "number": 7,
       "price": 3.25,
-      "description": "Encyclopaedia galactica great turbulent clouds, venture Euclid, cosmos birth billions upon billions citizens of distant epochs rich in mystery, the sky calls to us muse about worldlets.",
+      "description": "Deep-fried dumpings stuffed with cream cheese, crab meat, and garlic.  Served with sweet plum dipping sauce.",
       "category": "Appetizer",
       "popularity": 2
     },
@@ -21,7 +21,7 @@
       "name": "Potato Pancakes",
       "number": 8,
       "price": 3.00,
-      "description": "Encyclopaedia galactica great turbulent clouds, venture Euclid, cosmos birth billions upon billions citizens of distant epochs rich in mystery, the sky calls to us muse about worldlets.",
+      "description": "Pan-fried cakes of ground potato flavored with onion and garlic.  Served with garlic cream and apple dipping sauce.",
       "category": "Appetizer",
       "popularity": 3
     },
@@ -29,7 +29,7 @@
       "name": "Saurkraut Balls",
       "number": 9,
       "price": 2.75,
-      "description": "Encyclopaedia galactica great turbulent clouds, venture Euclid, cosmos birth billions upon billions citizens of distant epochs rich in mystery, the sky calls to us muse about worldlets.",
+      "description": "Fermented cabbage rolled in our finest batter, then fried to perfection.",
       "category": "Appetizer",
       "popularity": 4
     },
@@ -37,7 +37,7 @@
       "name": "Egg Rolls",
       "number": 10,
       "price": 3.75,
-      "description": "Encyclopaedia galactica great turbulent clouds, venture Euclid, cosmos birth billions upon billions citizens of distant epochs rich in mystery, the sky calls to us muse about worldlets.",
+      "description": "Deep-fried flour dough wraps with a mixture of diced vegetables, sprouts, and shrimp.",
       "category": "Appetizer",
       "popularity": 5
     },
@@ -45,7 +45,7 @@
       "name": "Vegetable Soup",
       "number": 16,
       "price": 3.75,
-      "description": "Encyclopaedia galactica great turbulent clouds, venture Euclid, cosmos birth billions upon billions citizens of distant epochs rich in mystery, the sky calls to us muse about worldlets.",
+      "description": "Homemade vegetable soup with a spicy tomato base.  Contains tomatoes, green beans, corn, and carrots.",
       "category": "Soup",
       "popularity": 1
     },
@@ -53,7 +53,7 @@
       "name": "Potato Soup",
       "number": 17,
       "price": 4.25,
-      "description": "Encyclopaedia galactica great turbulent clouds, venture Euclid, cosmos birth billions upon billions citizens of distant epochs rich in mystery, the sky calls to us muse about worldlets.",
+      "description": "Cream-based potato soup with garlic, proscuitto, and finely cut roasted red potatoes.",
       "category": "Soup",
       "popularity": 2
 
@@ -62,7 +62,7 @@
       "name": "Pho Soup",
       "number": 18,
       "price": 4.00,
-      "description": "Encyclopaedia galactica great turbulent clouds, venture Euclid, cosmos birth billions upon billions citizens of distant epochs rich in mystery, the sky calls to us muse about worldlets.",
+      "description": "Traditional Vietnamese soup served with rice noodles, variety of herbs, beef, chicken, green and white onions, and lime wedges.",
       "category": "Soup",
       "popularity": 3
     },
@@ -70,7 +70,7 @@
       "name": "Spinach Salad",
       "number": 22,
       "price": 5.50,
-      "description": "Encyclopaedia galactica great turbulent clouds, venture Euclid, cosmos birth billions upon billions citizens of distant epochs rich in mystery, the sky calls to us muse about worldlets.",
+      "description": "Lightly sauteed spinach bed topped with balsamic vinaigrette dressing, shrimp, feta cheese, and fresh cilantro.",
       "category": "Salad",
       "popularity": 3
     },
@@ -78,7 +78,7 @@
       "name": "Chef Salad",
       "number": 23,
       "price": 6.25,
-      "description": "Encyclopaedia galactica great turbulent clouds, venture Euclid, cosmos birth billions upon billions citizens of distant epochs rich in mystery, the sky calls to us muse about worldlets.",
+      "description": "Traditional salad with a romaine lettuce base, diced eggs, cheddar cheese, bacon, tomatoes, cucumbers, and the house vinaigrette dressing.",
       "category": "Salad",
       "popularity": 2
 
@@ -87,7 +87,7 @@
       "name": "Kale Salad",
       "number": 24,
       "price": 6.00,
-      "description": "Encyclopaedia galactica great turbulent clouds, venture Euclid, cosmos birth billions upon billions citizens of distant epochs rich in mystery, the sky calls to us muse about worldlets.",
+      "description": "Crunchy kale salad with a lemon vinaigrette, kosher salt, olive oil, mango, and strawberries.",
       "category": "Salad",
       "popularity": 1
     },
@@ -95,7 +95,7 @@
       "name": "Chickpea Curry",
       "number": 1,
       "price": 5.50,
-      "description": "Encyclopaedia galactica great turbulent clouds, venture Euclid, cosmos birth billions upon billions citizens of distant epochs rich in mystery, the sky calls to us muse about worldlets.",
+      "description": "Freshly prepared chickpeas tossed in a sauce of curry, turmeric, diced tomatoes and our spice recipe blend.  Served over freshly made Basmati rice.",
       "category": "Entree",
       "popularity": 1
     },
@@ -103,7 +103,7 @@
       "name": "General Tso's Chicken",
       "number": 2,
       "price": 6.25,
-      "description": "Encyclopaedia galactica great turbulent clouds, venture Euclid, cosmos birth billions upon billions citizens of distant epochs rich in mystery, the sky calls to us muse about worldlets.",
+      "description": "A house favorite - deep-fried chicken mixed with a sauce of ginger, rice vinegar, garlic, and soy.  Highly recommended.",
       "category": "Entree",
       "popularity": 2
 
@@ -112,7 +112,7 @@
       "name": "Pepperoni Pizza",
       "number": 3,
       "price": 5.00,
-      "description": "Encyclopaedia galactica great turbulent clouds, venture Euclid, cosmos birth billions upon billions citizens of distant epochs rich in mystery, the sky calls to us muse about worldlets.",
+      "description": "Hand-tossed 14-inch pizza with freshly cut spiced pepperoni sausage from local farms.",
       "category": "Entree",
       "popularity": 3
     },
@@ -120,7 +120,7 @@
       "name": "Monte Cristo Sandwich",
       "number": 4,
       "price": 6.00,
-      "description": "Encyclopaedia galactica great turbulent clouds, venture Euclid, cosmos birth billions upon billions citizens of distant epochs rich in mystery, the sky calls to us muse about worldlets.",
+      "description": "Deep-fried crispy ham and swiss-cheese sandwich, topped with powdered sugar and served with a delicious cranberry chutney.",
       "category": "Entree",
       "popularity": 4
     },
@@ -128,7 +128,7 @@
       "name": "Jaegerschnitzel",
       "number": 5,
       "price": 7.00,
-      "description": "Encyclopaedia galactica great turbulent clouds, venture Euclid, cosmos birth billions upon billions citizens of distant epochs rich in mystery, the sky calls to us muse about worldlets.",
+      "description": "A German favorite - pork filet, thin-pounded and coated with breadcrumbs, then deep-fried and served with a hearty mushroom sauce.",
       "category": "Entree",
       "popularity": 5
     },
@@ -136,7 +136,7 @@
       "name": "Red Cabbage",
       "number": 25,
       "price": 3.00,
-      "description": "Encyclopaedia galactica great turbulent clouds, venture Euclid, cosmos birth billions upon billions citizens of distant epochs rich in mystery, the sky calls to us muse about worldlets.",
+      "description": "Fresh red cabbage, diced and then served with vinegar.",
       "category": "Sides",
       "popularity": 3
     },
@@ -144,7 +144,7 @@
       "name": "Sauteed Vegetables",
       "number": 26,
       "price": 2.00,
-      "description": "Encyclopaedia galactica great turbulent clouds, venture Euclid, cosmos birth billions upon billions citizens of distant epochs rich in mystery, the sky calls to us muse about worldlets.",
+      "description": "California blend of vegetables, lightly sauteed in extra virgin olive oil.",
       "category": "Sides",
       "popularity": 2
     },
@@ -152,7 +152,7 @@
       "name": "Caramelized Onions",
       "number": 27,
       "price": 2.50,
-      "description": "Encyclopaedia galactica great turbulent clouds, venture Euclid, cosmos birth billions upon billions citizens of distant epochs rich in mystery, the sky calls to us muse about worldlets.",
+      "description": "Sweet onions, diced and lightly sauteed to a sweet golden brown.",
       "category": "Sides",
       "popularity": 1
     },
@@ -160,7 +160,7 @@
       "name": "Ice Cream",
       "number": 11,
       "price": 5.25,
-      "description": "Encyclopaedia galactica great turbulent clouds, venture Euclid, cosmos birth billions upon billions citizens of distant epochs rich in mystery, the sky calls to us muse about worldlets.",
+      "description": "Homemade vanilla ice cream, perfect for any occasion.",
       "category": "Dessert",
       "popularity": 1
     },
@@ -168,7 +168,7 @@
       "name": "Custard",
       "number": 12,
       "price": 4.50,
-      "description": "Encyclopaedia galactica great turbulent clouds, venture Euclid, cosmos birth billions upon billions citizens of distant epochs rich in mystery, the sky calls to us muse about worldlets.",
+      "description": "Homemade custard, perfect for any occasion.",
       "category": "Dessert",
       "popularity": 2
     },
@@ -176,7 +176,7 @@
       "name": "FroYo",
       "number": 13,
       "price": 3.50,
-      "description": "Encyclopaedia galactica great turbulent clouds, venture Euclid, cosmos birth billions upon billions citizens of distant epochs rich in mystery, the sky calls to us muse about worldlets.",
+      "description": "Homemade frozen yogurt, perfect for any occasion.",
       "category": "Dessert",
       "popularity": 3
     },
@@ -184,7 +184,7 @@
       "name": "Pecan Pie",
       "number": 14,
       "price": 4.50,
-      "description": "Encyclopaedia galactica great turbulent clouds, venture Euclid, cosmos birth billions upon billions citizens of distant epochs rich in mystery, the sky calls to us muse about worldlets.",
+      "description": "Homemade pecan pie, baked daily, perfect for any occasion.",
       "category": "Dessert",
       "popularity": 4
     },
@@ -192,7 +192,7 @@
       "name": "Fresh Fruit Bowl",
       "number": 15,
       "price": 4.25,
-      "description": "Encyclopaedia galactica great turbulent clouds, venture Euclid, cosmos birth billions upon billions citizens of distant epochs rich in mystery, the sky calls to us muse about worldlets.",
+      "description": "Fresh mixed fruit from our favorite local farmers, topped with local organic honey.",
       "category": "Dessert",
       "popularity": 5
     },
@@ -200,7 +200,7 @@
       "name": "Fresh Coffee",
       "number": 19,
       "price": 3.50,
-      "description": "Encyclopaedia galactica great turbulent clouds, venture Euclid, cosmos birth billions upon billions citizens of distant epochs rich in mystery, the sky calls to us muse about worldlets.",
+      "description": "Fresh coffee from a rotating variety of free-trade sources.",
       "category": "Beverage",
       "popularity": 3
     },
@@ -208,7 +208,7 @@
       "name": "Coconut Water",
       "number": 20,
       "price": 4.00,
-      "description": "Encyclopaedia galactica great turbulent clouds, venture Euclid, cosmos birth billions upon billions citizens of distant epochs rich in mystery, the sky calls to us muse about worldlets.",
+      "description": "Water.  From coconuts.  Tastes incredible.",
       "category": "Beverage",
       "popularity": 1
     },
@@ -216,7 +216,7 @@
       "name": "House Beer",
       "number": 21,
       "price": 3.50,
-      "description": "Encyclopaedia galactica great turbulent clouds, venture Euclid, cosmos birth billions upon billions citizens of distant epochs rich in mystery, the sky calls to us muse about worldlets.",
+      "description": "Rotating seasonal variety of house-brewed beer.",
       "category": "Beverage",
       "popularity": 5
     },
@@ -224,7 +224,7 @@
       "name": "House Wine",
       "number": 22,
       "price": 3.25,
-      "description": "Encyclopaedia galactica great turbulent clouds, venture Euclid, cosmos birth billions upon billions citizens of distant epochs rich in mystery, the sky calls to us muse about worldlets.",
+      "description": "Rotating seasonal variety of house-distilled wine obtained from local grape vineries.",
       "category": "Beverage",
       "popularity": 5
     }
