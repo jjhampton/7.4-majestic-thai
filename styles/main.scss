@@ -90,20 +90,26 @@ a:hover {
   margin-top: 5px;
 }
 
+.item-title {
+  text-align: center;
+}
+
 .item-button-cancel {
-  margin-left: 20px;
+  margin-left: 10px;
 }
 
 .item-button-add {
   float: right;
-  margin-right: 20px;
+  margin-right: 10px;
 }
 
 .order-header,
 .order-list,
 .order-item,
 .order-subtotal,
-.order-checkout {
+.order-tax,
+.order-checkout,
+.order-total {
   border: 1px solid gray;
 }
 
@@ -114,7 +120,9 @@ a:hover {
 .order-list-headings,
 .order-item,
 .order-subtotal,
-.order-checkout {
+.order-tax,
+.order-checkout,
+.order-total {
   padding: 10px;
 }
 

@@ -14,7 +14,9 @@ export default Backbone.View.extend({
 
   render: function(model, collection) {
     this.$el.html(this.template({
-      subtotal: this.model.get('subtotal')
+      subtotal: this.model.get('subtotal'),
+      tax: this.model.get('tax'),
+      total: this.model.get('total')
     }));
     this.renderChildren();
   },

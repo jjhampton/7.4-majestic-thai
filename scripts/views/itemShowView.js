@@ -23,6 +23,7 @@ export default Backbone.View.extend({
       'name': clickedItem.name,
       'number': clickedItem.number,
       'price': clickedItem.price,
+      'description': clickedItem.description,
       'id': clickedItem.objectId
     });
     this.order.add(itemToAdd);

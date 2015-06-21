@@ -16,7 +16,8 @@ import ajaxConfig from './ajax-config';
 var Router = Backbone.Router.extend({
   routes: {
     '': 'index',
-    'items/:id': 'show'
+    'items/:id': 'item',
+    'checkout': 'checkout'
   },
 
   initialize: function() {
@@ -27,6 +28,10 @@ var Router = Backbone.Router.extend({
     this.fetchItemsPromise = this.items.fetch();
 
   },
+
+  /*
+  / Route Callbacks
+  */
 
   index: function() {
     this.fetchItemsPromise.then(function(data) {
@@ -39,20 +44,17 @@ var Router = Backbone.Router.extend({
         collection: itemsByCategory,
         order: this.order,
       });
-
-      this.showView(menuView);
-
       var orderView = new OrderView({
         model: this.order,
         collection: this.orderCollection,
       });
 
-      $('.order').html(orderView.el);
-
+      this.showItemView(menuView);
+      this.showOrderView(orderView);
     }.bind(this));
   },
 
-  show: function(id) {
+  item: function(id) {
     this.fetchItemsPromise.then(function(){
       var clickedItem = _.findWhere(this.items.toJSON(), {objectId: id});
 
@@ -61,23 +63,42 @@ var Router = Backbone.Router.extend({
         model: clickedItem,
         order: this.order
       });
-
-      this.showView(itemShowView);
-
       var orderView = new OrderView({
         model: this.order,
         collection: this.orderCollection,
       });
 
-      $('.order').html(orderView.el);
+      this.showItemView(itemShowView);
+      this.showOrderView(orderView);
+
     }.bind(this));
   },
 
-  showView: function(view) {
-    if (this.currentView) this.currentView.remove();
-    this.currentView = view;
+  checkout: function() {
+    var orderCheckoutView = new OrderCheckoutView({
+      order: this.order
+    });
+
+    this.showView(orderCheckoutView);
+  },
+
+  /*
+  / Helper Functions
+  */
+
+  // Combine both show functions to be DRY
+  showItemView: function(view) {
+    if (this.currentItemView) this.currentItemView.remove();
+    this.currentItemView = view;
     $('.menu').html(view.el);
+  },
+
+  showOrderView: function(view) {
+    if (this.currentOrderView) this.currentOrderView.remove();
+    this.currentOrderView = view;
+    $('.order').html(view.el);
   }
+
 });
 
 var router = new Router();
