@@ -51,9 +51,7 @@ var Router = Backbone.Router.extend({
   },
 
   show: function(id) {
-    console.log(id);
     var clickedItem = _.findWhere(this.items.toJSON(), {objectId: id});
-    console.log(clickedItem);
 
 
     var itemShowView = new ItemShowView({

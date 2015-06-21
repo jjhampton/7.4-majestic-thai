@@ -18,7 +18,6 @@ export default Backbone.View.extend({
 
   addToOrder: function(event) {
     var clickedItem = this.model;
-    console.log(clickedItem);
     var itemToAdd = new Item();
     itemToAdd.set({
       'name': clickedItem.name,
@@ -26,7 +25,6 @@ export default Backbone.View.extend({
       'price': clickedItem.price,
       'id': clickedItem.objectId
     });
-    console.log(itemToAdd.toJSON(), 'model will be added');
     this.order.add(itemToAdd);
   }
 });

@@ -25,6 +25,7 @@ export default Backbone.View.extend({
     this.children = this.model.map(function(child) {
       var view = new OrderItemView({
         model: child,
+        order: this.model
       });
       this.$('.order-subtotal').before(view.el);
       return view;

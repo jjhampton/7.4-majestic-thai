@@ -17,7 +17,6 @@ export default Backbone.View.extend({
 
   showItem: function() {
     var clickedItem = this.model.toJSON();
-    console.log(clickedItem, "clicked");
   }
 });
 
