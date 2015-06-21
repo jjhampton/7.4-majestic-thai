@@ -26,7 +26,8 @@ var Router = Backbone.Router.extend({
       collection: orderCollection
     });
 
-    items.fetch().then(function() {
+    items.fetch().then(function(data) {
+      console.log(data);
       var popularItemsArray = items.where({popularity: 1});
       var itemsByCategory = items.groupBy('category');
 

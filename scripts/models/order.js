@@ -43,7 +43,7 @@ var Order =  Backbone.Model.extend({
           return {
             "__type": "Pointer",
             "className": "Items",
-            "objectId": item.id
+            "objectId": item.get('id')
           };
       })
     });

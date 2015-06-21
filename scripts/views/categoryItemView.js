@@ -21,14 +21,15 @@ export default Backbone.View.extend({
 
   addToOrder: function(event) {
     var clickedItem = this.model.toJSON();
+    console.log(clickedItem);
     var itemToAdd = new Item();
-    console.log('clicked', clickedItem.name, 'in category item view');
     itemToAdd.set({
       'name': clickedItem.name,
       'number': clickedItem.number,
       'price': clickedItem.price,
+      'id': clickedItem.objectId
     });
-    console.log(itemToAdd, 'model will be added');
+    console.log(itemToAdd.toJSON(), 'model will be added');
     this.order.add(itemToAdd);
   }
 });

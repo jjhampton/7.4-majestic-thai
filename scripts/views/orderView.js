@@ -36,9 +36,7 @@ export default Backbone.View.extend({
   },
 
   checkoutOrder: function() {
-    console.log('checkout clicked');
     console.log(this.model.toJSON());
-    console.log(this.collection.toJSON());
     this.collection.create(this.model, {
       dataType: 'text',
       success: function(model, response) {
@@ -48,14 +46,6 @@ export default Backbone.View.extend({
         console.log("save NOT successful", response.toJSON());
       }
     });
-    // this.model.save(null,{
-    //   dataType: 'text',
-    //   success: function(model, response) {
-    //     console.log("save successful");
-    //   },
-    //   error: function(model, response) {
-    //     console.log("save NOT successful", response.toJSON());
-    //   }
-    // });
+    console.log(this.collection.toJSON());
   }
 });
