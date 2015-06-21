@@ -4,7 +4,6 @@ import CategoryVM from '../view-models/categoryVM';
 
 export default Backbone.View.extend({
   tagName: 'section',
-  className: 'menu',
 
   initialize: function(options) {
     this.order = options.order;

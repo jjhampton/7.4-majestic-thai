@@ -1,6 +1,5 @@
 export default Backbone.View.extend({
   template: JST.itemShow,
-  className: 'item',
 
   initialize: function() {
     this.render();

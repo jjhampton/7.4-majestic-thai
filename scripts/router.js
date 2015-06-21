@@ -21,13 +21,12 @@ var Router = Backbone.Router.extend({
 
   initialize: function() {
     this.items = new Items();
-    var order = new Order();
-    var orderCollection = new OrderCollection();
-    var orderView = new OrderView({
-      model: order,
-      collection: orderCollection
-    });
+    this.order = new Order();
+    this.orderCollection = new OrderCollection();
 
+  },
+
+  index: function() {
     this.items.fetch().then(function(data) {
       var popularItemsArray = this.items.where({popularity: 1});
       var itemsByCategory = this.items.groupBy('category');
@@ -36,16 +35,19 @@ var Router = Backbone.Router.extend({
 
       var menuView = new MenuView({
         collection: itemsByCategory,
-        order: order,
+        order: this.order,
       });
 
-      $('.main-container').prepend(menuView.el);
-      $('.main-container').append(orderView.el);
+      this.showView(menuView);
+
+      var orderView = new OrderView({
+        model: this.order,
+        collection: this.orderCollection,
+      });
+
+      $('.order').html(orderView.el);
+
     }.bind(this));
-  },
-
-  index: function() {
-
   },
 
   show: function(id) {
@@ -55,11 +57,16 @@ var Router = Backbone.Router.extend({
 
 
     var itemShowView = new ItemShowView({
-      model: clickedItem
+      model: clickedItem,
     });
 
-    $('.menu').replaceWith(itemShowView.el);
+    this.showView(itemShowView);
+  },
 
+  showView: function(view) {
+    if (this.currentView) this.currentView.remove();
+    this.currentView = view;
+    $('.menu').html(view.el);
   }
 });
 

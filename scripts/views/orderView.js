@@ -2,8 +2,6 @@ import OrderItemView from './orderItemView';
 
 export default Backbone.View.extend({
   template: JST.order,
-  tagName: 'sidebar',
-  className: 'order',
 
   events: {
     'click .order-checkout-button': 'checkoutOrder'
