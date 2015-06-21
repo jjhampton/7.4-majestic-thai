@@ -5,6 +5,10 @@ export default Backbone.View.extend({
   tagName: 'sidebar',
   className: 'order',
 
+  events: {
+    'click .order-checkout-button': 'checkoutOrder'
+  },
+
   initialize: function(){
     this.render();
     this.listenTo(this.model, 'add remove', this.render);
@@ -30,4 +34,8 @@ export default Backbone.View.extend({
 
     return this;
   },
+
+  checkoutOrder: function() {
+    console.log('checkout clicked');
+  }
 });

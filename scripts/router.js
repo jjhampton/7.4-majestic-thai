@@ -1,6 +1,8 @@
 import {Items} from './models/items';
 
 import {Order} from './models/order';
+import {OrderCollection} from './models/order';
+
 
 import MenuView from './views/menuView';
 
@@ -17,6 +19,8 @@ var Router = Backbone.Router.extend({
   initialize: function() {
     var items = new Items();
     var order = new Order();
+    //new collection to be saved on backend??
+    var orderCollection = new OrderCollection();
     var orderView = new OrderView({
       model: order,
     });
@@ -34,6 +38,7 @@ var Router = Backbone.Router.extend({
 
       $('.main-container').prepend(menuView.el);
       $('.main-container').append(orderView.el);
+      console.log(orderCollection);
     }.bind(this));
   },
 
