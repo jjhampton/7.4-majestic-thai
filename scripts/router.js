@@ -58,6 +58,7 @@ var Router = Backbone.Router.extend({
 
     var itemShowView = new ItemShowView({
       model: clickedItem,
+      order: this.order
     });
 
     this.showView(itemShowView);

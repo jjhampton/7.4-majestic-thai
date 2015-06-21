@@ -1,6 +1,3 @@
-import {Item} from '../models/items';
-
-
 export default Backbone.View.extend({
   template: JST.categoryItem,
   className: 'category-item',
@@ -12,7 +9,6 @@ export default Backbone.View.extend({
   initialize: function(options) {
     this.order = options.order;
     this.render();
-    this.listenTo(this.order, 'update', this.render);
   },
 
   render: function() {
@@ -22,20 +18,6 @@ export default Backbone.View.extend({
   showItem: function() {
     var clickedItem = this.model.toJSON();
     console.log(clickedItem, "clicked");
-  },
-
-  addToOrder: function(event) {
-    var clickedItem = this.model.toJSON();
-    console.log(clickedItem);
-    var itemToAdd = new Item();
-    itemToAdd.set({
-      'name': clickedItem.name,
-      'number': clickedItem.number,
-      'price': clickedItem.price,
-      'id': clickedItem.objectId
-    });
-    console.log(itemToAdd.toJSON(), 'model will be added');
-    this.order.add(itemToAdd);
   }
 });
 
