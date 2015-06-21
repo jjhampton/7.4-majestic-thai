@@ -1,6 +1,5 @@
 import CategoryItemView from './categoryItemView';
 
-
 export default Backbone.View.extend({
   template: JST.category,
   tagName: 'section',
@@ -8,19 +7,21 @@ export default Backbone.View.extend({
 
   events: {
     'click .category-dropdown': 'toggleDropdown'
+
   },
 
   initialize: function(options) {
     this.order = options.order;
+    this.viewModel = options.viewModel;
     this.category = options.category;
     this.render();
-    this.listenTo(this.model, 'change:isHidden', this.render);
+    this.listenTo(this.viewModel, 'change:isHidden', this.render);
   },
 
   render: function() {
     this.$el.html(this.template({
       category: this.category,
-      isHidden: this.model.get('isHidden')
+      isHidden: this.viewModel.get('isHidden')
       }));
     this.renderChildren();
   },
@@ -31,9 +32,10 @@ export default Backbone.View.extend({
     this.children = this.collection.map(function(child) {
       var view = new CategoryItemView({
         model: child,
-        order: this.order
+        order: this.order,
       });
-      this.$('.category-item-container').append(view.el);
+      // this.$el.append(view.el);
+      this.$('.container-item-container').append(view.el);
       return view;
     }.bind(this));
 
@@ -41,9 +43,6 @@ export default Backbone.View.extend({
   },
 
   toggleDropdown: function() {
-    console.log('toggle clicked');
-    console.log(this.model.get('isHidden'));
-    this.model.set('isHidden', !this.model.get('isHidden'));
-    console.log(this.model.get('isHidden'));
+    this.viewModel.set('isHidden', !this.viewModel.get('isHidden'));
   }
 });
