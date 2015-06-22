@@ -31,9 +31,8 @@ export default Backbone.View.extend({
     this.children = this.collection.map(function(child) {
       var view = new CategoryItemView({
         model: child,
-        order: this.order,
+        order: this.order
       });
-      // this.$el.append(view.el);
       this.$('.container-item-container').append(view.el);
       return view;
     }.bind(this));

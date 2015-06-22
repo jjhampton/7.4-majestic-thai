@@ -1,0 +1,26 @@
+<h4 class="order-name">Customer Name: {{customer}}</h4>
+<div class="order-list">
+  <div class="order-list-headings">
+    <span class="order-item-heading">Items</span>
+    <span class="order-price-heading">Price</span>
+  </div>
+</div>
+{{#each this}}
+  <div class="order-item">
+    <span class="order-item-text">{{number}}. {{name}}</span>
+    <span class="order-item-price">${{price}}</span>
+  </div>
+{{/each}}
+</div>
+<div class="order-subtotal">
+<span class="order-item-text">Subtotal</span>
+<span class="order-item-price">${{subtotal}}</span>
+</div>
+<div class="order-tax">
+<span class="order-item-text">Tax</span>
+<span class="order-item-price">${{tax}}</span>
+</div>
+<div class="order-total">
+<span class="order-item-text">Total</span>
+<span class="order-item-price">${{total}}</span>
+</div>
