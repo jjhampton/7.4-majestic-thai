@@ -11,8 +11,8 @@ $medium-gray: #999;
 $light-gray: #ddd;
 $very-light-gray: #fafafa;
 
-$base-font-color: $dark-gray;
-$base-background-color: $very-light-gray;
+$base-font-color: #2A0B05;
+$base-background-color: #FFDBD3;
 
 * {
   -webkit-box-sizing: border-box;
@@ -40,7 +40,7 @@ a:hover {
   display: inline-block;
   vertical-align: top;
   width: 65%;
-  border: 1px solid red;
+  border: 1px solid $base-font-color;
   margin-left: 20px;
 }
 
@@ -51,23 +51,22 @@ a:hover {
   vertical-align: top;
   margin-right: 20px;
   width: 30%;
-  border: 1px solid red;
+  border: 1px solid $base-font-color;
 }
 
-.category,
-.item {
-  border: 1px solid red;
-}
+.category {
+/*   border: 1px solid red;
+ */}
 
 .category-title,
-.item-title,
-.item-description {
+.item-title {
+  border-bottom: 1px solid #FF461F;
   padding: 10px;
 }
 
 .category-title {
   margin-bottom: 0;
-  background: $light-gray;
+  background: #FF9E8A;
 }
 
 .category-dropdown {
@@ -76,8 +75,8 @@ a:hover {
 
 .category-item
 {
-  border: 1px solid black;
   padding: 10px;
+  border-bottom: 1px solid #FF461F;
 }
 
 .category-item-text {
@@ -93,6 +92,10 @@ a:hover {
 
 .item-title {
   text-align: center;
+  background-color: #FF9E8A;
+}
+.item-description {
+  padding: 10px
 }
 
 .item-button-cancel,
@@ -110,15 +113,19 @@ a:hover {
 .order-item,
 .order-subtotal,
 .order-tax,
-.order-checkout,
 .order-total,
 .order-name
  {
-  border: 1px solid gray;
+  border-bottom: 1px solid #FF461F;
 }
 
 .order-header {
+  background-color: #FF9E8A;
   text-align: center;
+}
+
+.order-header-logo {
+  color: red;
 }
 
 .order-list-headings,
