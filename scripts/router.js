@@ -17,7 +17,6 @@ var Router = Backbone.Router.extend({
   routes: {
     '': 'index',
     'items/:id': 'item',
-    'exit': 'exit'
   },
 
   initialize: function() {
@@ -72,14 +71,6 @@ var Router = Backbone.Router.extend({
       this.showOrderView(orderView);
 
     }.bind(this));
-  },
-
-  exit: function() {
-    // var orderCheckoutView = new OrderCheckoutView({
-    //   order: this.order
-    // });
-
-    $('.menu').html(JST.orderExit);
   },
 
   /*

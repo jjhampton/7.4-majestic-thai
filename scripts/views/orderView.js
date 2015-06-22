@@ -37,9 +37,6 @@ export default Backbone.View.extend({
   },
 
   checkoutOrder: function() {
-    //Add a name property to order - add later
-
-    console.log(this.model.toJSON());
     //customer name input  on page before checking out
     var customer = $('.order-name-input').val();
     //current subtotal value - to determine if any items have actually been added
@@ -51,12 +48,13 @@ export default Backbone.View.extend({
         dataType: 'text',
         success: function(model, response) {
           console.log("save successful");
+          $('.menu').html(JST.orderExit);
         },
         error: function(model, response) {
           console.log("save NOT successful", response.toJSON());
         }
       });
-      Backbone.history.navigate('exit', {trigger: true});
+
     }
     else {
       alert("Please enter a name and choose some items before checking out.");
