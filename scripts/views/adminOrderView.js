@@ -1,4 +1,7 @@
 import AdminOrderItemView from './adminOrderItemView';
+import {AdminOrderItem} from '../models/adminOrderItem';
+import {AdminOrderItems} from '../models/adminOrderItem';
+
 
 export default Backbone.View.extend({
   template: JST.adminOrder,
@@ -16,17 +19,29 @@ export default Backbone.View.extend({
   renderChildren: function() {
     _.invoke(this.children || [], 'remove');
 
-    var orderedItems = this.model.get('orderedItems');
-    console.log(orderedItems);
+    var objectId = this.model.get('objectId');
+    var adminOrderItem = new AdminOrderItem();
+    var adminOrderItems = new AdminOrderItems();
 
-    this.children = orderedItems.map(function(child) {
-      var view = new AdminOrderItemView({
-        model: child,
-      });
-      this.$('.order-subtotal').before(view.el);
-      return view;
-    }.bind(this));
+    adminOrderItems.url = "https://api.parse.com/1/classes/Order/" + objectId;
 
-    return this;
+    adminOrderItems.fetch({
+      data: {include: 'orderedItems'}
+    }).then(function(response) {
+      console.log("This customer's ordered items are", response.orderedItems);
+    });
+    // var orders = this.collection;
+
+
+    // this.children = orders.map(function(child) {
+    //   var view = new AdminOrderItemView({
+    //     model: child,
+    //
+    //   });
+    //   this.$('.order-subtotal').before(view.el);
+    //   return view;
+    // }.bind(this));
+    //
+    // return this;
   }
 });

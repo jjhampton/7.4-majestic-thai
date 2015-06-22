@@ -3,7 +3,6 @@ import {Items} from './models/items';
 import {Order} from './models/order';
 import {OrderCollection} from './models/order';
 
-import {AdminOrder} from './models/adminOrder';
 import {AdminOrders} from './models/adminOrder';
 
 import AdminView from './views/adminView';

@@ -19,6 +19,7 @@ export default Backbone.View.extend({
     this.children = this.collection.map(function(child) {
       var view = new AdminOrderView({
         model: child,
+        collection: this.collection
       });
       this.$el.append(view.el);
       return view;
