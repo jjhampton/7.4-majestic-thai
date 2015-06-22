@@ -3,6 +3,10 @@ import {Items} from './models/items';
 import {Order} from './models/order';
 import {OrderCollection} from './models/order';
 
+import {AdminOrder} from './models/adminOrder';
+import {AdminOrders} from './models/adminOrder';
+
+import AdminView from './views/adminView';
 
 import MenuView from './views/menuView';
 
@@ -17,6 +21,7 @@ var Router = Backbone.Router.extend({
   routes: {
     '': 'index',
     'items/:id': 'item',
+    ':admin': 'admin'
   },
 
   initialize: function() {
@@ -71,6 +76,17 @@ var Router = Backbone.Router.extend({
       this.showOrderView(orderView);
 
     }.bind(this));
+  },
+
+  admin: function() {
+    var adminOrders = new AdminOrders();
+
+    adminOrders.fetch().then(function(data) {
+      var adminView = new AdminView({
+        collection: adminOrders
+      });
+      $('.main-container').html(adminView.el);
+    });
   },
 
   /*

@@ -7,7 +7,6 @@ export default Backbone.View.extend({
 
   events: {
     'click .category-dropdown': 'toggleDropdown'
-
   },
 
   initialize: function(options) {
