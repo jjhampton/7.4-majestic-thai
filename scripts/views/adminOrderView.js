@@ -1,3 +1,5 @@
+import AdminOrderItemView from './adminOrderItemView';
+
 export default Backbone.View.extend({
   template: JST.adminOrder,
   className: 'admin-order',
@@ -8,20 +10,23 @@ export default Backbone.View.extend({
 
   render: function() {
     this.$el.html(this.template(this.model.toJSON()));
-    // this.renderChildren();
-  }
+    this.renderChildren();
+  },
 
-  // renderChildren: function() {
-  //   _.invoke(this.children || [], 'remove');
-  //
-  //   this.children = this.collection.map(function(child) {
-  //     var view = new CategoryItemView({
-  //       model: child,
-  //     });
-  //     this.$el.append(view.el);
-  //     return view;
-  //   }.bind(this));
-  //
-  //   return this;
-  // }
+  renderChildren: function() {
+    _.invoke(this.children || [], 'remove');
+
+    var orderedItems = this.model.get('orderedItems');
+    console.log(orderedItems);
+
+    this.children = orderedItems.map(function(child) {
+      var view = new AdminOrderItemView({
+        model: child,
+      });
+      this.$('.order-subtotal').before(view.el);
+      return view;
+    }.bind(this));
+
+    return this;
+  }
 });
