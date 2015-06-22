@@ -6,7 +6,7 @@ var Order =  Backbone.Model.extend({
 
   //are defaults needed???
   defaults: {
-    name: ""
+    customer: ""
   },
 
   initialize: function() {
@@ -40,7 +40,7 @@ var Order =  Backbone.Model.extend({
       orderedItems: this.orderedItems.map(function(item){
           return {
             "__type": "Pointer",
-            "className": "Items",
+            "className": "Item",
             "objectId": item.get('id')
           };
       })

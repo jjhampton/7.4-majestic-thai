@@ -95,7 +95,8 @@ a:hover {
   text-align: center;
 }
 
-.item-button-cancel {
+.item-button-cancel,
+.order-exit-button-return {
   margin-left: 10px;
 }
 
@@ -110,7 +111,9 @@ a:hover {
 .order-subtotal,
 .order-tax,
 .order-checkout,
-.order-total {
+.order-total,
+.order-name
+ {
   border: 1px solid gray;
 }
 
@@ -123,7 +126,8 @@ a:hover {
 .order-subtotal,
 .order-tax,
 .order-checkout,
-.order-total {
+.order-total,
+.order-name {
   padding: 10px;
 }
 
@@ -140,6 +144,10 @@ a:hover {
   width: 25%;
 }
 
+.order-name-input {
+  margin-bottom: 0;
+  width: 100%;
+}
 
 .order-checkout-button {
   display: block;
