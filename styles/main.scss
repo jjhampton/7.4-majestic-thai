@@ -38,13 +38,17 @@ a:hover {
 }
 
 .menu,
-.item,
-.admin-container {
+.item {
   display: inline-block;
   vertical-align: top;
   width: 65%;
-  border: 1px solid $base-font-color;
   margin-left: 20px;
+}
+
+.admin-container {
+  width: 80%;
+  margin: 0 auto;
+  border: 1px solid $base-font-color;
 }
 
 .order {
