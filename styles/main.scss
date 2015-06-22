@@ -66,15 +66,16 @@ a:hover {
 
 .category-title {
   margin-bottom: 0;
+  color: $base-font-color;
   background: #FF9E8A;
 }
 
 .category-dropdown {
   float: right;
+  color: #C02100;
 }
 
-.category-item
-{
+.category-item {
   padding: 10px;
   border-bottom: 1px solid #FF461F;
 }
