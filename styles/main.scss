@@ -80,7 +80,7 @@ a:hover {
 
 .category-dropdown {
   position: relative;
-  top: -5px;
+  top: -7px;
   float: right;
   color: #C02100;
 }
@@ -103,6 +103,11 @@ a:hover {
   float: right;
   vertical-align: top;
   margin-top: 5px;
+}
+
+.item-show {
+  margin: 10px;
+  border: 1px solid #FF461F;
 }
 
 .item-title {

@@ -2,6 +2,7 @@ import {Item} from '../models/items';
 
 export default Backbone.View.extend({
   template: JST.itemShow,
+  className: 'item-show',
 
   events: {
     'click .item-button-add': 'addToOrder'
