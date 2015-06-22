@@ -153,7 +153,8 @@ a:hover {
 .order-tax,
 .order-checkout,
 .order-total,
-.order-name {
+.order-name,
+.order-name-container {
   padding: 10px;
 }
 
@@ -168,6 +169,10 @@ a:hover {
 .order-price-heading,
 .order-item-price {
   width: 25%;
+}
+
+.order-total {
+  font-weight: bold;
 }
 
 .order-name-input {
