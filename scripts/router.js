@@ -104,7 +104,6 @@ var Router = Backbone.Router.extend({
     this.currentOrderView = view;
     $('.order').html(view.el);
   }
-
 });
 
 var router = new Router();

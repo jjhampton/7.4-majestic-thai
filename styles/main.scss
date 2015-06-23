@@ -59,7 +59,7 @@ a:hover {
   margin-top: 10px;
   margin-right: 20px;
   width: 30%;
-  border: 1px solid $base-font-color;
+  border: 1px solid #FF461F;
 }
 
 .category {
@@ -67,8 +67,7 @@ a:hover {
   border: 1px solid #FF461F;
 }
 
-.category-title,
-.item-title {
+.category-title {
   padding: 10px;
 }
 
@@ -85,9 +84,17 @@ a:hover {
   color: #C02100;
 }
 
-.category-item {
+.category-item,
+.item-show-title {
   padding: 10px;
   border-bottom: 1px solid #FF461F;
+}
+
+.item-show-title {
+  padding: 10px;
+  border-bottom: 1px solid #FF461F;
+  text-align: center;
+  background-color: #FF9E8A;
 }
 
 .category-item:last-child {
@@ -106,13 +113,15 @@ a:hover {
 }
 
 .item-show {
-  margin: 10px;
+  margin-top: 10px;
   border: 1px solid #FF461F;
 }
 
 .item-title {
   text-align: center;
   background-color: #FF9E8A;
+  margin: 10px;
+  border: 1px solid #FF461F;
 }
 .item-description {
   padding: 10px
