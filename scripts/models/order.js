@@ -41,7 +41,7 @@ var Order =  Backbone.Model.extend({
           return {
             "__type": "Pointer",
             "className": "Item",
-            "objectId": item.get('id')
+            "objectId": item.id
           };
       })
     });
@@ -71,7 +71,11 @@ var Order =  Backbone.Model.extend({
 
 var OrderCollection = Backbone.Collection.extend({
   model: Order,
-  url: "https://api.parse.com/1/classes/Order"
+  url: "https://api.parse.com/1/classes/Order/",
+  //Parse API returns models under results property
+  parse: function(response) {
+    return response.results;
+  }
 });
 
 export default {Order, OrderCollection};

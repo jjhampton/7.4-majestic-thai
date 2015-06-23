@@ -3,8 +3,6 @@ import {Items} from './models/items';
 import {Order} from './models/order';
 import {OrderCollection} from './models/order';
 
-import {AdminOrders} from './models/adminOrder';
-
 import AdminView from './views/adminView';
 
 import MenuView from './views/menuView';
@@ -78,9 +76,11 @@ var Router = Backbone.Router.extend({
   },
 
   admin: function() {
-    var adminOrders = new AdminOrders();
+    var adminOrders = new OrderCollection();
 
-    adminOrders.fetch().then(function(data) {
+    adminOrders.fetch({
+      data: {include: 'orderedItems'}
+    }).then(function() {
       var adminView = new AdminView({
         collection: adminOrders
       });
