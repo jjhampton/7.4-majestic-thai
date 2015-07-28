@@ -24,7 +24,12 @@ $base-background-color: #FFDBD3;
 
 body {
   font-family: $base-font-family;
-  background-color: $base-background-color;
+/*   background-color: $base-background-color; */
+background: -webkit-linear-gradient(90deg, #FF512F 10%, #F09819 90%); /* Chrome 10+, Saf5.1+ */
+background:    -moz-linear-gradient(90deg, #FF512F 10%, #F09819 90%); /* FF3.6+ */
+background:     -ms-linear-gradient(90deg, #FF512F 10%, #F09819 90%); /* IE10 */
+background:      -o-linear-gradient(90deg, #FF512F 10%, #F09819 90%); /* Opera 11.10+ */
+background:         linear-gradient(90deg, #FF512F 10%, #F09819 90%); /* W3C */
   color: $base-font-color;
 }
 
@@ -59,22 +64,26 @@ a:hover {
   margin-top: 10px;
   margin-right: 20px;
   width: 30%;
-  border: 1px solid #FF461F;
+  border: 1px solid #771601;
 }
 
 .category {
   margin: 10px;
-  border: 1px solid #FF461F;
+  border: 1px solid #771601;
 }
 
 .category-title {
   padding: 10px;
-}
-
-.category-title {
+  font-style: italic;
+  font-weight: 500;
+  font-size: 2em;
   margin-bottom: 0;
   color: $base-font-color;
-  background: #FF9E8A;
+  background-color: #F89C51;
+}
+
+.category-item-title {
+  font-style: italic;
 }
 
 .category-dropdown {
@@ -87,12 +96,12 @@ a:hover {
 .category-item,
 .item-show-title {
   padding: 10px;
-  border-bottom: 1px solid #FF461F;
+  border-bottom: 1px solid #771601;
 }
 
 .item-show-title {
   padding: 10px;
-  border-bottom: 1px solid #FF461F;
+  border-bottom: 1px solid #771601;
   text-align: center;
   background-color: #FF9E8A;
 }
@@ -114,14 +123,14 @@ a:hover {
 
 .item-show {
   margin-top: 10px;
-  border: 1px solid #FF461F;
+  border: 1px solid #771601;
 }
 
 .item-title {
   text-align: center;
   background-color: #FF9E8A;
   margin: 10px;
-  border: 1px solid #FF461F;
+  border: 1px solid #771601;
 }
 .item-description {
   padding: 10px
@@ -145,16 +154,16 @@ a:hover {
 .order-total,
 .order-name
  {
-  border-bottom: 1px solid #FF461F;
+  border-bottom: 1px solid #771601;
 }
 
 .order-header {
-  background-color: #FF9E8A;
+  background-color: #F89C51;
   text-align: center;
 }
 
 .order-name {
-  background-color: #FF461F;
+  background-color: rgba(255, 158, 138, 0.5);
 }
 
 .order-restaurant {
@@ -164,6 +173,10 @@ a:hover {
 
 .order-header-logo {
   color: red;
+}
+
+.order-heading {
+  font-weight: 500;
 }
 
 .order-list-headings,
