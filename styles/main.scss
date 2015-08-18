@@ -11,11 +11,208 @@ $medium-gray: #999;
 $light-gray: #ddd;
 $very-light-gray: #fafafa;
 
-$base-font-color: $dark-gray;
-$base-background-color: $very-light-gray;
+$base-font-color: #2A0B05;
+$base-background-color: #FFDBD3;
+
+// Palleton URL http://paletton.com/#uid=7080u0ksayjeGZ15vzwU4o4sw5k
+
+* {
+  -webkit-box-sizing: border-box;
+     -moz-box-sizing: border-box;
+          box-sizing: border-box;
+}
 
 body {
   font-family: $base-font-family;
-  background-color: $base-background-color;
+/*   background-color: $base-background-color; */
+background: -webkit-linear-gradient(90deg, #FF512F 10%, #F09819 90%); /* Chrome 10+, Saf5.1+ */
+background:    -moz-linear-gradient(90deg, #FF512F 10%, #F09819 90%); /* FF3.6+ */
+background:     -ms-linear-gradient(90deg, #FF512F 10%, #F09819 90%); /* IE10 */
+background:      -o-linear-gradient(90deg, #FF512F 10%, #F09819 90%); /* Opera 11.10+ */
+background:         linear-gradient(90deg, #FF512F 10%, #F09819 90%); /* W3C */
   color: $base-font-color;
+}
+
+a {
+  color: inherit;
+  text-decoration: inherit;
+}
+
+a:hover {
+  color: inherit;
+}
+
+.menu,
+.item {
+  display: inline-block;
+  vertical-align: top;
+  width: 65%;
+  margin-left: 20px;
+}
+
+.admin-container {
+  width: 80%;
+  margin: 0 auto;
+  border: 1px solid $base-font-color;
+}
+
+.order {
+  position: fixed;
+  right: 0;
+  display: inline-block;
+  vertical-align: top;
+  margin-top: 10px;
+  margin-right: 20px;
+  width: 30%;
+  border: 1px solid #771601;
+}
+
+.category {
+  margin: 10px;
+  border: 1px solid #771601;
+}
+
+.category-title {
+  padding: 10px;
+  font-style: italic;
+  font-weight: 500;
+  font-size: 2em;
+  margin-bottom: 0;
+  color: $base-font-color;
+  background-color: #F89C51;
+}
+
+.category-item-title {
+  font-style: italic;
+}
+
+.category-dropdown {
+  position: relative;
+  top: -7px;
+  float: right;
+  color: #C02100;
+}
+
+.category-item,
+.item-show-title {
+  padding: 10px;
+  border-bottom: 1px solid #771601;
+}
+
+.item-show-title {
+  padding: 10px;
+  border-bottom: 1px solid #771601;
+  text-align: center;
+  background-color: #FF9E8A;
+}
+
+.category-item:last-child {
+  border-bottom: none;
+}
+
+.category-item-text {
+  display: inline-block;
+  width: 70%;
+}
+
+.category-item-button-price {
+  float: right;
+  vertical-align: top;
+  margin-top: 5px;
+}
+
+.item-show {
+  margin-top: 10px;
+  border: 1px solid #771601;
+}
+
+.item-title {
+  text-align: center;
+  background-color: #FF9E8A;
+  margin: 10px;
+  border: 1px solid #771601;
+}
+.item-description {
+  padding: 10px
+}
+
+.item-button-cancel,
+.order-exit-button-return {
+  margin-left: 10px;
+}
+
+.item-button-add {
+  float: right;
+  margin-right: 10px;
+}
+
+.order-header,
+.order-list,
+.order-item,
+.order-subtotal,
+.order-tax,
+.order-total,
+.order-name
+ {
+  border-bottom: 1px solid #771601;
+}
+
+.order-header {
+  background-color: #F89C51;
+  text-align: center;
+}
+
+.order-name {
+  background-color: rgba(255, 158, 138, 0.5);
+}
+
+.order-restaurant {
+  color: #C02100;
+  font-weight: bolder;
+}
+
+.order-header-logo {
+  color: red;
+}
+
+.order-heading {
+  font-weight: 500;
+}
+
+.order-list-headings,
+.order-item,
+.order-subtotal,
+.order-tax,
+.order-checkout,
+.order-total,
+.order-name,
+.order-name-container {
+  padding: 10px;
+}
+
+.order-item-heading,
+.order-price-heading,
+.order-item-text,
+.order-item-price {
+  display: inline-block;
+  width: 60%;
+}
+
+.order-price-heading,
+.order-item-price {
+  width: 25%;
+}
+
+.order-total {
+  font-weight: bold;
+}
+
+.order-name-input {
+  margin-bottom: 0;
+  width: 100%;
+}
+
+.order-checkout-button {
+  display: block;
+  margin: 0 auto;
 }

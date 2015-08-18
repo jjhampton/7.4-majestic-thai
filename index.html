@@ -8,25 +8,33 @@
     <title></title>
 
     <link rel="stylesheet" href="bower_components/normalize.css/normalize.css">
-
+    <link rel="stylesheet" href="styles/font-awesome-4.3.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="styles/skeleton.css">
     <link rel="stylesheet" href="dist/styles/main.css">
 
     <script src="bower_components/modernizr/modernizr.js"></script>
   </head>
   <body>
 
-  <!-- Third Party Scripts -->
-  <script src="bower_components/commonjs-require/commonjs-require.js"></script>
-  <script src="bower_components/jquery/dist/jquery.js"></script>
-  <script src="bower_components/underscore/underscore.js"></script>
-  <script src="bower_components/handlebars/handlebars.js"></script>
+    <div class="main-container">
+      <section class="menu">
+      </section>
+      <sidebar class="order">
+      </sidebar>
+    </div>
 
-  <!-- Application Scripts -->
-  <script src="dist/scripts/templates.js"></script>
-  <script src="dist/scripts/app.js"></script>
-  <script>
-    require('main');
-  </script>
+    <!-- Third Party Scripts -->
+    <script src="bower_components/commonjs-require/commonjs-require.js"></script>
+    <script src="bower_components/jquery/dist/jquery.js"></script>
+    <script src="bower_components/underscore/underscore.js"></script>
+    <script src="bower_components/handlebars/handlebars.js"></script>
+    <script src="bower_components/backbone/backbone-min.js"></script>
 
-</body>
+    <!-- Application Scripts -->
+    <script src="dist/scripts/templates.js"></script>
+    <script src="dist/scripts/app.js"></script>
+    <script>
+      require('main');
+    </script>
+  </body>
 </html>

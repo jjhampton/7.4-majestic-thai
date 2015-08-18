@@ -1,7 +1,11 @@
-(function(){
-  'use strict';
+import router from './router';
 
-  $(document).ready(function(){
-    $('body').prepend(JST.application());
+(function() {
+  'use strict';
+  $(document).ready(function() {
+
+    Backbone.history.start();
+    
   });
+
 })();
