@@ -44,10 +44,7 @@ a:hover {
 
 .menu,
 .item {
-  display: inline-block;
   vertical-align: top;
-  width: 65%;
-  margin-left: 20px;
 }
 
 .admin-container {
@@ -57,13 +54,8 @@ a:hover {
 }
 
 .order {
-  position: fixed;
-  right: 0;
-  display: inline-block;
   vertical-align: top;
   margin-top: 10px;
-  margin-right: 20px;
-  width: 30%;
   border: 1px solid #771601;
 }
 
@@ -190,6 +182,10 @@ a:hover {
   padding: 10px;
 }
 
+.order-checkout {
+  text-align: center;
+}
+
 .order-item-heading,
 .order-price-heading,
 .order-item-text,
@@ -210,9 +206,4 @@ a:hover {
 .order-name-input {
   margin-bottom: 0;
   width: 100%;
-}
-
-.order-checkout-button {
-  display: block;
-  margin: 0 auto;
 }
