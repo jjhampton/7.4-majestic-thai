@@ -1,8 +1,8 @@
 #Total Fusion
 
-Dynamically updating customer-facing restaurant menu built with Backbone.js and Parse as a backend server.
+Dynamically updating customer-facing restaurant menu built with Backbone.js, Skeleton CSS framework, and Parse as a backend server.
 
-I built this in week 7 at The Iron Yard Academy to practice planning, designing and creating a Backbone-based dynamic front end application based on client requirements.
+I built this in week 7 at The Iron Yard Academy to practice planning, designing and creating a Backbone-based dynamic front end application based on client requirements.  The Skeleton CSS framework is used for it's button elements and lightweight responsive grid framework.
 
 ##Live Demo:
 * http://jjhampton.github.io/7.4-total-fusion
